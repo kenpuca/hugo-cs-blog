@@ -4,14 +4,15 @@
 {{ define "main" }}
     {{ $author := (.Param "author") }}
     {{ $part := (.Param "part") }}
-    <div class="single container">
-        <h1> 
+    <div class="page-break no-print"></div>
+    <div class="single container {{.Param "class"}}">
+        <h1 class="single-title"> 
             {{ .Title }} 
         </h1>
 
-        {{.Content}}
-
         {{ partial "turn-page.html" . }}
+
+        {{.Content}}
 
         {{ if $author }}
         <p class="author"> 

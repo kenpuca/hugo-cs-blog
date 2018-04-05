@@ -1,6 +1,14 @@
-{{ $posts := (where .Data.Pages "Type" "posts") }}
+{{ $posts := (where .Data.Pages "Section" "posts") }}
 {{ $count := (len $posts) }}
-<p> Total post count: {{ $count }} </p>
+<p class="post-counts">
+{{ if (eq $count 0) }}
+There are no posts yet.
+{{ else if (eq $count 1) }}
+There is one post.
+{{ else }}
+There are {{$count}} posts.
+{{ end }}
+</p>
 
 <ul class="summaries">
     {{ range $posts }}

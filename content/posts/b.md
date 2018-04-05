@@ -9,13 +9,13 @@ Let's examine basics of Clojure.
 
 <!--more-->
 
-**Literal**
+## Literal
 
 ```
 3.1415
 ```
 
-**Symbols, Bindings & Scope**
+## Symbols, Bindings & Scope
 
 We can define bindings that are valid for
 the entire program.
