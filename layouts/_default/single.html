@@ -1,0 +1,26 @@
+{{ define "head" }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/single.css">
+{{ end }}
+{{ define "main" }}
+    {{ $author := (.Param "author") }}
+    {{ $part := (.Param "part") }}
+    <div class="single container">
+        <h1> 
+            {{ .Title }} 
+        </h1>
+
+        {{.Content}}
+
+        {{ partial "turn-page.html" . }}
+
+        {{ if $author }}
+        <p class="author"> 
+        {{ $author }} <br>
+        {{ dateFormat "Monday, Jan 2, 2006" .Date }}
+        </p>
+        {{ end }}
+    </div>
+{{ end }}
+{{ define "footer" }}
+  {{ partial "mathjax.html" . }}
+{{ end }}

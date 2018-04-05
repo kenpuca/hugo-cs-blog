@@ -1,0 +1,9 @@
+{{ $posts := (where .Data.Pages "Type" "posts") }}
+{{ $count := (len $posts) }}
+<p> Total post count: {{ $count }} </p>
+
+<ul class="summaries">
+    {{ range $posts }}
+    <li> {{ .Render "summary" }} </li>
+    {{ end }}
+</ul>

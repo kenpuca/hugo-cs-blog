@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 400px;
+    font-size: 1.25em;
+}
+blockquote {
+    margin-left: 30px;
+    margin-right: 0;
+}
+blockquote blockquote {
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+    font-style: italic;
+}
+blockquote blockquote::before {
+    content: '“';
+    font-size: 200%;
+    float: left;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+blockquote blockquote::after {
+    content: '”';
+    float: right;
+    font-size: 200%;
+    margin-top: -30px;
+    margin-right: -30px;
+}
+
+.container > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container > ul > li {
+    padding-left: 10px;
+    border-left: 4px solid #aaa;
+    margin-bottom: 1em;
+}
+
+.turn-page {
+    position: relative;
+    width: 100%;
+}
+.turn-page a {
+    display: inline-block;
+    position: absolute;
+    font-family: Helvetica;
+    font-size: 75%;
+    font-weight: bold;
+    text-decoration: none;
+    color: Gray;
+}
+.turn-page a:hover {
+    color: black;
+}
+.turn-page .prev {
+    left: 0;
+}
+.turn-page .next {
+    right: 0;
+}
+@media print {
+    .turn-page {
+        display: none;
+    }
+}
+
+strong {
+    color: Crimson;
+}
+
+pre, code {
+    font-family: VT323, monospace;
+    font-size: 90%;
+}
+.single.container > h1 {
+    color: Crimson;
+}
+
+author {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.author {
+    text-align: right;
+    font-size: 100%;
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 5px solid Teal;
+    color: Teal;
+}

@@ -1,0 +1,13 @@
+<div class="turn-page">
+    {{ if .Prev }}
+    {{ if (eq .Prev.Type .Type) }}
+    <a class="next" href="{{.Prev.Permalink}}">Next</a>
+    {{ end }}
+    {{ end }}
+    
+    {{ if .Next }}
+    {{ if (eq .Next.Type .Type) }}
+    <a class="prev" href="{{.Next.Permalink}}">Previous</a>
+    {{ end }}
+    {{ end }}
+</div>

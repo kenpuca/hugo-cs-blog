@@ -1,0 +1,13 @@
+
+{{ define "head" }}
+<link rel=stylesheet href="{{.Site.BaseURL}}css/index.css">
+{{ end }}
+
+{{ define "main" }}
+    {{ $type := .Type }}
+    <div class="list container">
+        <h1> {{ $type | humanize }} </h1>
+
+        {{ partial "list-posts.html" . }}
+    </div>
+{{ end }}

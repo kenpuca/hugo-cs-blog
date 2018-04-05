@@ -1,0 +1,23 @@
+{{ define "head" }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/index.css">
+{{ end }}
+
+{{ define "main" }}
+    <div class="index container">
+        <h1> Programming &amp; Computer Science </h1>
+        <section>
+            <h2> Contact </h2>
+            {{ with (.Site.GetPage "page" "fragments/contact.md") }}
+            <div> {{ .Content }} </div>
+            {{ end }}
+
+            <h2> About </h2>
+            {{ with (.Site.GetPage "page" "fragments/about.md") }}
+            <div> {{ .Content }} </div>
+            {{ end }}
+
+            <h2> Posts </h2>
+            <div> {{ partial "list-posts.html" . }} </div>
+        </section>
+    </div>
+{{ end }}
