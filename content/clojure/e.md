@@ -17,7 +17,7 @@ _dynamic scopes_, and is generally considered as a
 >> therefore, be regarded as a criminal offense.
 >> <author>Edsger W. Dijkstra</author>
 
-## Declare dynamic var
+## Declaration of dynamic var
 
 Dynamic vars are special symbols.  Unlike other symbols,
 their bindings can be *changed* in the same scope.

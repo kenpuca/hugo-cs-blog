@@ -5,7 +5,9 @@ author = "Ken Pu"
 date = "2018-04-01"
 +++
 
-Let's talk about literals, data values, symbols and bindings.
+Programs are a way for us humans to communicate with
+machines.  Literals, symbols and bindings of symbols to values
+are incredibly fundamental, and yet often left implicit.
 
 <!--more-->
 

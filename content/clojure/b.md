@@ -5,7 +5,8 @@ author = "Ken Pu"
 date = "2018-04-02"
 +++
 
-Let's examine basics of Clojure.
+Clojure has really nice syntax for
+specifying values, symbols and bindings.
 
 <!--more-->
 

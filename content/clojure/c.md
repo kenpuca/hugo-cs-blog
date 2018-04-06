@@ -22,12 +22,14 @@ using some sort of computation.
   ...)
 {{</highlight>}}
 
-> This is synonymous to how mathematicians express
-> functions.
-> $$ f(x, y) = \dots $$
->
-> `(defn f ...)` creates a top-level symbol `f` that is bound to
-> a 2-arity function.
+{{% remark %}}
+This is synonymous to how mathematicians express
+functions.
+$$ f(x, y) = \dots $$
+{{% /remark %}}
+
+`(defn f ...)` creates a top-level symbol `f` that is bound to
+a 2-arity function.
 
 ## Using functions.
 
