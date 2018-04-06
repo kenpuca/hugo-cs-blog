@@ -121,6 +121,7 @@ author {
 .remark {
     font-size: 80%;
     margin-left: auto;
+    margin-bottom: 1em;
     border: thin solid teal;
     border-top-width: 4px;
     padding: 10px;
@@ -133,7 +134,7 @@ author {
     position: absolute;
     left: 0;
     top: 950px;
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 .comments {

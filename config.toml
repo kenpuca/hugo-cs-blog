@@ -1,5 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://kenpuca.github.io/"
 languageCode = "en-us"
-title = "CS Blog"
+title = "Programming & Computer Science"
 pygmentsUseClasses = true
 disqusShortname = "kenpuca"
+googleAnalytics = "UA-52618243-1"

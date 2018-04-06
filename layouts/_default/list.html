@@ -4,10 +4,7 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ $type := .Type }}
     <div class="list container">
-        <h1> {{ $type | humanize }} </h1>
-
-        {{ partial "list-posts.html" . }}
+        <h1> {{ .Section | humanize }} </h1>
     </div>
 {{ end }}

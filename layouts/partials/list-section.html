@@ -1,0 +1,7 @@
+<div class="section-listing">
+    <ul class="summaries">
+        {{ range .Data.Pages }}
+        <li> {{ .Render "summary" }} </li>
+        {{ end }}
+    </ul>
+</div>

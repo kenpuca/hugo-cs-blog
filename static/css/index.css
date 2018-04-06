@@ -3,6 +3,7 @@ section {
     grid-template-columns: 30% 70%;
     grid-template-rows: auto auto;
     grid-row-gap: 50px;
+    grid-column-gap: 20px;
 }
 section h1,
 section h2,
@@ -10,24 +11,76 @@ section h3 {
     margin: 0;
     padding: 0;
 }
+section h1 a {
+    color: Teal;
+    text-decoration: none;
+}
+section h1 a:hover {
+    text-decoration: underline;
+}
+section .section-content {
+    font-size: 90%;
+    margin: 0.5em 1em 0 0.5em;
+    text-align: justify;
+}
+
+section span.count {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 70%;
+    display: inline-block;
+    color: #aaa;
+    position: relative;
+    top: -10px;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        display: block;
+    }
+    section h1,
+    section h2,
+    section h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    section > h2 {
+        border-bottom: 2px solid #aaa;
+    }
+}
 
 .container {
     max-width: 670px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 110%;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        font-size: 100%;
+    }
 }
 
 .container > h1 {
     margin-bottom: 50px;
 }
 
-ul.summaries {
+.section-listing > div {
+    margin-bottom: 1em;
+}
+.section-listing ul.summaries {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-ul.summaries .summary-entry h1 {
-    font-size: 130%; 
+.section-listing ul.summaries li {
+    margin-bottom: 1em;
+}
+.section-listing .summary-entry h1 {
+    font-size: 120%; 
     margin-bottom: 10px;
+}
+.section-listing .summary-entry p {
+    font-size: 90%;
 }
 

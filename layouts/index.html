@@ -4,20 +4,37 @@
 
 {{ define "main" }}
     <div class="index container">
-        <h1> Programming &amp; Computer Science </h1>
+        <h1> {{ .Site.Title }} </h1>
         <section>
             <h2> Contact </h2>
-            {{ with (.Site.GetPage "page" "fragments/contact.md") }}
+            {{ with (.Site.GetPage "page" "pages/contact.md") }}
             <div> {{ .Content }} </div>
             {{ end }}
 
-            <h2> About </h2>
-            {{ with (.Site.GetPage "page" "fragments/about.md") }}
+            {{ with (.Site.GetPage "page" "pages/about/index.md") }}
+            {{ $img := .Resources.GetMatch "photo.jpg" }}
+            <div class="about">
+                <h2> About </h2>
+                <img style="max-width:80%" src="{{$img.RelPermalink}}"></img>
+            </div>
             <div> {{ .Content }} </div>
             {{ end }}
 
-            <h2> Posts </h2>
-            <div> {{ partial "list-posts.html" . }} </div>
+            {{ range .Site.Sections }}
+                {{ $count := len .Data.Pages }}
+                {{ if (and (not (.Param "exclude")) (gt $count 0)) }}
+                    <div>
+                        <h2> 
+                            <span class="count"> {{ $count }} </span>
+                            {{ .Title }} 
+                        </h2>
+                        <div class="section-content">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                    {{ partial "list-section.html" . }}
+                {{ end }}
+            {{ end }}
         </section>
     </div>
 {{ end }}
