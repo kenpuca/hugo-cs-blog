@@ -135,3 +135,8 @@ author {
     top: 950px;
     opacity: 0.5;
 }
+
+.comments {
+    font-family: Helvetica;
+    font-size: 75%;
+}

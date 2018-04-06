@@ -1,5 +1,8 @@
 {{ define "head" }}
 <link rel="stylesheet" href="{{.Site.BaseURL}}css/single.css">
+<script>
+var disqus_developer = 1;
+</script>
 {{ end }}
 {{ define "main" }}
     {{ $author := (.Param "author") }}
@@ -19,6 +22,9 @@
         {{ $author }} <br>
         {{ dateFormat "Monday, Jan 2, 2006" .Date }}
         </p>
+        <div class="comments no-print">
+            {{ template "_internal/disqus.html" . }}
+        </div>
         {{ end }}
     </div>
 {{ end }}

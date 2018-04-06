@@ -44,10 +44,12 @@ to the function _forever_.
   (defn calc-tax [income]
     (* tax-rate tax)))
 
-(calc-tax 1000); => 100
+(let [tax-rate 0.2] (calc-tax 1000))
+; => 100
 {{< /highlight >}}
 
 {{% remark %}}
 The body of `calc-tax` does not declare `tax-rate`, but
-it _inherited_ the symbol from outer scope.
+it _inherited_ the symbol from scope of function declaration,
+not scope of function invocation.
 {{% /remark %}} 

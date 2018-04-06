@@ -2,19 +2,52 @@
 title: "Functions and Scopes - 2"
 date: 2018-04-05T17:18:01-04:00
 author: "Ken Pu"
-draft: true
+class: "small"
 ---
 
 Dynamic variables are symbols that can be temporally
 bound to a new value, and the binding propagates into
 the body of a function.  This pattern is known as
 _dynamic scopes_, and is generally considered as a
-**bad idea**.
+**bad idea**.  Nonetheless, here it is.
 
 <!--more-->
 
 >> The use of COBOL cripples the mind; its teaching should,
 >> therefore, be regarded as a criminal offense.
 >> <author>Edsger W. Dijkstra</author>
+
+## Declare dynamic var
+
+Dynamic vars are special symbols.  Unlike other symbols,
+their bindings can be *changed* in the same scope.
+
+{{<highlight clojure>}}
+(def ^:dynamic tax-rate 0.1)
+(defn calc-tax [income] (* tax-rate income))
+{{</highlight>}}
+
+The dynamic var acts as a normal symbol,
+and is captured by the lexical rule.
+
+{{<highlight clojure>}}
+(calc-tax 1000) ; => 100.0
+{{</highlight>}}
+
+## Dynamic binding
+
+But the existing binding of a dynamic var can be modified.
+
+{{<highlight clojure>}}
+(binding [tax-rate 0.15]
+  (calc-tax 1000)) ;=> 150.0
+{{</highlight>}}
+
+This is something that `(let ...)` cannot achieve:
+
+{{<highlight clojure>}}
+(let [tax-rate 0.15]
+  (calc-tax 1000)) ;=> 100.0
+{{</highlight>}}
 
 
