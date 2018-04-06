@@ -2,3 +2,5 @@ baseURL = "https://kenpuca.github.io/"
 languageCode = "en-us"
 title = "CS Blog"
 pygmentsUseClasses = true
+disqusShortname = "kenpuca"
+googleAnalytics = "UA-52618243-1"
