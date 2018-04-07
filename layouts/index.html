@@ -15,7 +15,7 @@
             {{ $img := .Resources.GetMatch "photo.jpg" }}
             <div class="about">
                 <h2> About </h2>
-                <img style="max-width:80%" src="{{$img.RelPermalink}}"></img>
+                <img src="{{$img.RelPermalink}}"></img>
             </div>
             <div> {{ .Content }} </div>
             {{ end }}

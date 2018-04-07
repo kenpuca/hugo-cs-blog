@@ -34,6 +34,10 @@ section span.count {
     top: -10px;
 }
 
+section .about img {
+    max-width: 80%;
+}
+
 @media screen and (max-width: 600px) {
     section {
         display: block;
@@ -46,6 +50,10 @@ section span.count {
     }
     section > h2 {
         border-bottom: 2px solid #aaa;
+    }
+    section .about img {
+        max-width: 30%;
+        float: right;
     }
 }
 
