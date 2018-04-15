@@ -2,9 +2,8 @@
 title = "Clojure on a page"
 +++
 
-Clojure is a cool language. I like how the language features allows
-a programmer to think in Clojure.  This series of posts describe
+Clojure is a cool language. I like how the language features allow
+a programmer to think in the language.  This series of posts describe
 ideas in the language of _Clojure_.
 
-Each post is on a specific idea around Clojure, and each post
-fits on a page when printed.
+Each post fits on a single page (if you try to print them out).

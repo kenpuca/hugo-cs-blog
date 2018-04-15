@@ -7,9 +7,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    max-width: 400px;
+    max-width: 800px;
     font-size: 1.25em;
 }
+.container.clojure {
+    max-width: 400px;
+}
+
 .small.container { font-size: 1.15em; }
 .tiny.container { font-size: 1.0em; }
 .large.container { font-size: 1.5em; }
@@ -140,4 +144,27 @@ author {
 .comments {
     font-family: Helvetica;
     font-size: 75%;
+}
+
+.draft {
+    font-family: Helvetica;
+    color: Salmon;
+    font-weight: bold;
+    font-size: 30pt;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+table td,
+table th {
+    border: thin solid #aaa;
+    padding: 5px;
 }

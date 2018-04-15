@@ -7,8 +7,11 @@ var disqus_developer = 1;
 {{ define "main" }}
     {{ $author := (.Param "author") }}
     {{ $part := (.Param "part") }}
+    {{ if .Draft }}
+        <div class="draft">Draft</div>
+    {{ end }}
     <div class="page-break no-print"></div>
-    <div class="single container {{.Param "class"}}">
+    <div class="single container {{.Param "class"}} {{.Type}}">
         <h1 class="single-title"> 
             {{ .Title }} 
         </h1>
