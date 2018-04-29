@@ -1,0 +1,18 @@
+{{ $n := len .Data.Pages }}
+
+{{ .Render "summary" }}
+
+{{ if .Data.Pages }}
+<ul class="pages-in-section">
+    {{ range $index, $page := .Data.Pages.ByWeight }}
+    {{ with $page }}
+    <li>
+        <a href="{{.Permalink}}">
+            Part {{add 1 $index}}
+            {{ if .Title }} : {{.Title}} {{ end }}
+        </a>
+    </li>
+    {{ end }}
+    {{ end }}
+</ul>
+{{ end }}

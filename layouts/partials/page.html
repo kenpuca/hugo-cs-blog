@@ -1,0 +1,18 @@
+<div class="single container {{.Param "class"}} {{.Type}}">
+    {{ if .Title }}
+    <h1 class="single-title"> {{.Title}} </h1>
+    {{ else if .Scratch.Get "title" }}
+    <h1 class="single-title"> 
+        <a href="{{.Permalink}}" class="page-link"> # </a>
+        {{.Scratch.Get "title"}} 
+    </h1>
+    {{ else }}
+    <h1 class="single-title"> {{.CurrentSection.Title}} - {{.Weight}} </h1>
+    {{ end }}
+
+    {{.Content}}
+
+    {{ if .Draft }}
+        <div class="draft">Draft</div>
+    {{ end }}
+</div>

@@ -1,44 +1,18 @@
 
 {{ define "head" }}
-<link rel=stylesheet href="{{.Site.BaseURL}}css/index.css">
-<style>
-.summary-entry {
-    display: grid;
-    grid-template-columns: 30% auto;
-    grid-column-gap: 20px;
-}
-.summary-entry h1 {
-    margin: 0;
-    padding: 0;
-}
-@media screen and (max-width: 600px) {
-    .summary-entry {
-        display: block;
-    }
-    .summary-entry > h1 {
-        margin-bottom: 1em;
-    }
-    .summary-entry > div {
-        margin-left: 1em;
-        font-size: 100%;
-    }
-}
-.content {
-    margin-bottom: 2em;
-}
-</style>
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/single.css">
 {{ end }}
 
 {{ define "main" }}
-    <div class="list container">
-        <h1> {{ .Title | humanize }} </h1>
+    <h1> List.html </h1>
 
-        <div class="content">
-            {{.Content}}
-        </div>
+    {{ $title := .Title }}
+    {{ partial "page.html" . }}
 
-        <div class="summary">
-            {{ partial "list-section.html" . }}
-        </div>
-    </div>
+    {{ range $index, $page := .Data.Pages }}
+    {{ with $page }}
+        {{ .Scratch.Set "title" (print $title " - " (add 1 $index)) }}
+        {{ partial "page.html" . }}
+    {{ end }}
+    {{ end }}
 {{ end }}

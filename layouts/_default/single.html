@@ -1,36 +1,32 @@
 {{ define "head" }}
 <link rel="stylesheet" href="{{.Site.BaseURL}}css/single.css">
 <script>
-var disqus_developer = 1;
+var disqus_developer = 2;
 </script>
 {{ end }}
+
+
 {{ define "main" }}
-    {{ $author := (.Param "author") }}
-    {{ $part := (.Param "part") }}
-    {{ if .Draft }}
-        <div class="draft">Draft</div>
-    {{ end }}
     <div class="page-break no-print"></div>
-    <div class="single container {{.Param "class"}} {{.Type}}">
-        <h1 class="single-title"> 
-            {{ .Title }} 
-        </h1>
 
-        {{ partial "turn-page.html" . }}
+    {{ partial "page.html" . }}
 
-        {{.Content}}
-
-        {{ if $author }}
-        <p class="author"> 
+    {{ $author := (.Param "author") }}
+    {{ if $author }}
+        <p class="author no-print"> 
         {{ $author }} <br>
         {{ dateFormat "Monday, Jan 2, 2006" .Date }}
         </p>
         <div class="comments no-print">
             {{ template "_internal/disqus.html" . }}
         </div>
-        {{ end }}
-    </div>
+    {{ end }}
+
+
 {{ end }}
+
+
+
 {{ define "footer" }}
   {{ partial "mathjax.html" . }}
 {{ end }}

@@ -73,22 +73,39 @@ section .about img {
     margin-bottom: 50px;
 }
 
-.section-listing > div {
-    margin-bottom: 1em;
-}
-.section-listing ul.summaries {
-    margin: 0;
-    padding: 0;
+ul.summaries {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.section-listing ul.summaries li {
+ul.summaries > li {
     margin-bottom: 1em;
-}
-.section-listing .summary-entry h1 {
-    font-size: 120%; 
-    margin-bottom: 10px;
-}
-.section-listing .summary-entry p {
-    font-size: 90%;
 }
 
+ul.pages-in-section {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0.5em;
+}
+ul.pages-in-section li {
+    display: inline-block;
+    margin-right: 10px;
+}
+ul.pages-in-section a {
+    display: inline-block;
+    text-decoration: none;
+    color: green;
+    padding: 2px 0px;
+    border-bottom: 2px solid transparent;
+}
+ul.pages-in-section a:hover {
+    border-bottom-color: black;
+}
+
+.summary-entry h1 {
+    margin-top: 0em;
+    font-size: 120%;
+}
+.summary-entry p {
+}

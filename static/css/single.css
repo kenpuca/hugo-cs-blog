@@ -168,3 +168,11 @@ table th {
     border: thin solid #aaa;
     padding: 5px;
 }
+
+a.page-link {
+    text-decoration: none;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 90%;
+}

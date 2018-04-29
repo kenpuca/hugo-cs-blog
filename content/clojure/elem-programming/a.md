@@ -1,6 +1,5 @@
 +++
-title = "About Programming - 1"
-part = 1
+weight = 1
 author = "Ken Pu"
 date = "2018-04-01"
 +++

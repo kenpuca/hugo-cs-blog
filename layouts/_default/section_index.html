@@ -1,20 +1,23 @@
-<div class="section-listing">
+<div class="section_listing">
     {{ if .Sections }}
-    <ul class="sec summaries">
+    <ul class="section summaries">
         {{ range .Sections }}
-        {{ $n := len .Data.Pages }}
-        <li> 
-            {{ if (gt $n 1) }}
-            <span> {{ $n }} </span>
-            {{ end }}
-            {{ .Render "summary" }} 
+        <li>
+        {{ partial "section-summary.html" . }}
         </li>
         {{ end }}
     </ul>
     {{ end }}
+
+
+    {{ if .Data.Pages }}
     <ul class="page summaries">
         {{ range .Data.Pages }}
         <li> {{ .Render "summary" }} </li>
         {{ end }}
     </ul>
+    {{ end }}
 </div>
+
+
+
