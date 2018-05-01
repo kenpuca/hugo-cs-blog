@@ -11,11 +11,11 @@ section h3 {
     margin: 0;
     padding: 0;
 }
-section h1 a {
+h1.title a {
     color: Teal;
     text-decoration: none;
 }
-section h1 a:hover {
+h1.title a:hover {
     text-decoration: underline;
 }
 section .section-content {

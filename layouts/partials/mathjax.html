@@ -1,3 +1,4 @@
+{{ if (or .Params.mathjax .Params.math) }}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -33,3 +34,4 @@
   });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js"></script>
+{{ end }}

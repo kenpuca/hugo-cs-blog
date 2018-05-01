@@ -10,6 +10,8 @@
     <h1 class="single-title"> {{.CurrentSection.Title}} - {{.Weight}} </h1>
     {{ end }}
 
+    {{ partial "author.html" . }}
+
     {{.Content}}
 
     {{ if .Draft }}

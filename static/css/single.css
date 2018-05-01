@@ -7,13 +7,15 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    max-width: 800px;
+    max-width: 600px;
     font-size: 1.25em;
 }
-.container.clojure {
-    max-width: 400px;
-}
 
+.w400.container { max-width: 400px; }
+.w500.container { max-width: 500px; }
+.w600.container { max-width: 600px; }
+.w800.container { max-width: 800px; }
+.w1200.container { max-width: 1200px; }
 .small.container { font-size: 1.15em; }
 .tiny.container { font-size: 1.0em; }
 .large.container { font-size: 1.5em; }
@@ -100,6 +102,7 @@ blockquote blockquote::after {
 
 pre, code {
     font-family: VT323, monospace;
+    font-style: normal !important;
 }
 
 .single.container h1.single-title {
@@ -110,15 +113,15 @@ pre, code {
 author {
     display: block;
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
 
 .author {
     text-align: right;
     font-size: 100%;
-    margin-top: 50px;
-    padding-top: 10px;
-    border-top: 5px solid Teal;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 1em;
     color: Teal;
 }
 
@@ -130,16 +133,6 @@ author {
     border-top-width: 4px;
     padding: 10px;
 } 
-
-.page-break {
-    width: 100%;
-    height: 1px;
-    border-top: 1px dashed black;
-    position: absolute;
-    left: 0;
-    top: 950px;
-    opacity: 0.1;
-}
 
 .comments {
     font-family: Helvetica;

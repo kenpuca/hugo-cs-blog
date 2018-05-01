@@ -1,5 +1,6 @@
 
 {{ define "head" }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/index.css">
 <link rel="stylesheet" href="{{.Site.BaseURL}}css/single.css">
 {{ end }}
 
@@ -9,10 +10,16 @@
     {{ $title := .Title }}
     {{ partial "page.html" . }}
 
+    <div class="single container">
+    {{ .Render "section_index" }}
+    </div>
+
+    {{ if false }}
     {{ range $index, $page := .Data.Pages }}
     {{ with $page }}
         {{ .Scratch.Set "title" (print $title " - " (add 1 $index)) }}
         {{ partial "page.html" . }}
+    {{ end }}
     {{ end }}
     {{ end }}
 {{ end }}

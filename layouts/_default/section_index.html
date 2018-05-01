@@ -1,7 +1,7 @@
 <div class="section_listing">
     {{ if .Sections }}
     <ul class="section summaries">
-        {{ range .Sections }}
+        {{ range .Sections.ByWeight }}
         <li>
         {{ partial "section-summary.html" . }}
         </li>
@@ -12,7 +12,7 @@
 
     {{ if .Data.Pages }}
     <ul class="page summaries">
-        {{ range .Data.Pages }}
+        {{ range .Data.Pages.ByWeight }}
         <li> {{ .Render "summary" }} </li>
         {{ end }}
     </ul>

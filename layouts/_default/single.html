@@ -7,22 +7,8 @@ var disqus_developer = 2;
 
 
 {{ define "main" }}
-    <div class="page-break no-print"></div>
-
     {{ partial "page.html" . }}
-
-    {{ $author := (.Param "author") }}
-    {{ if $author }}
-        <p class="author no-print"> 
-        {{ $author }} <br>
-        {{ dateFormat "Monday, Jan 2, 2006" .Date }}
-        </p>
-        <div class="comments no-print">
-            {{ template "_internal/disqus.html" . }}
-        </div>
-    {{ end }}
-
-
+    <div class="comments no-print"> {{ template "_internal/disqus.html" . }} </div>
 {{ end }}
 
 
