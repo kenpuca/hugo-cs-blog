@@ -2,7 +2,7 @@
 
 
 dev:
-	hugo serve -w -D --disableFastRender
+	hugo serve -w --disableFastRender
 
 css:
 	hugo gen chromastyles --style=colorful > static/css/syntax.css

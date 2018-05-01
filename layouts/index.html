@@ -30,7 +30,9 @@
                 {{ $numPages := len .Data.Pages }}
                 {{ $numSecs  := len .Sections }}
                 {{ $count    := add $numPages $numSecs }}
-                {{ if (not (.Param "exclude")) }}
+                {{ if (.Param "exclude") }}
+                    {{/* Skip */}}
+                {{ else }}
                     <div>
                         <h2> 
                             <span class="count"> {{ $count }} </span>
