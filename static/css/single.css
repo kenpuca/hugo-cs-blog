@@ -50,6 +50,7 @@ blockquote blockquote::after {
 .single.container hr {
     border: none;
     border-top: none;
+    padding: 1em 0;
 }
 
 .container > ul {
@@ -132,7 +133,35 @@ author {
     border: thin solid teal;
     border-top-width: 4px;
     padding: 10px;
-} 
+}
+
+.box {
+    padding: 10px;
+    border: thin solid #aaa;
+}
+.single.container .box {
+    padding-left: 30px;
+}
+.single.container .box h1,
+.single.container .box h2,
+.single.container .box h3 {
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    margin-bottom: 0.5em;
+    margin-left: -20px;
+}
+.single.container p strong {
+    font-weight: bold;
+    color: Teal;
+}
+.single.container .box h1 em,
+.single.container .box h2 em {
+    font-weight: normal;
+}
+
 
 .comments {
     font-family: Helvetica;

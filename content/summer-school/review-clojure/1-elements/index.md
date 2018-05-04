@@ -1,7 +1,8 @@
 +++
-title = "Review of Clojure"
+title = "Elements"
 author = "Ken Pu"
 date = "2018-05-01"
+weight = 1
 +++
 
 Clojure is very different from imperative languages such as Java / C / Go.
@@ -88,5 +89,4 @@ programming constructs.  So, the value that a symbol is bound to
 depends on the scope that the resolution is performed in.
 
 ![Nested Scopes](nested-scopes.png)
-
 

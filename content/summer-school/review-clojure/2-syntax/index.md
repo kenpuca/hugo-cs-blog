@@ -1,5 +1,6 @@
 +++
-title = "Syntax of Clojure"
+title = "Syntax"
+weight = 2
 +++
 
 Let survey the elements of Clojure constructs.  Each programming
@@ -85,3 +86,43 @@ It might be useful to keep in mind the following:
        <sym> <val>
        ... ] ...)
 {{</highlight>}}
+
+
+
+### Declaring functions
+
+Functions are also data, and you construct a function-value using
+the `(fn [...] ...)` form.
+
+Here is a function-value that is declared, but not bound to any symbol.
+
+{{<highlight clojure>}}
+(fn [a b c]
+  (let [n 3]
+    (/ (+ a b c) n)))
+{{</highlight>}}
+
+{{% remark %}}
+In side the fn form, we have _four_ symbols.  Note that there
+is no bindings for `a`, `b` nor `c` because these bindings
+will be created only when the function is applied to given
+arguments.
+{{% /remark %}}
+
+We can bind the function to a symbol so it can be used repeatedly.
+
+{{<highlight clojure>}}
+(def avg-3 (fn [a b c] 
+             (/ (+ a b c) 3)))
+{{</highlight>}}
+
+
+
+
+# Try it out:
+
+<iframe height="400px" width="100%"
+src="https://repl.it/@kenpu/Learning-Clojure?lite=true" scrolling="no"
+frameborder="no" allowtransparency="true" allowfullscreen="true"
+sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin
+allow-scripts allow-modals"></iframe>
