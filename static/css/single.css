@@ -138,6 +138,7 @@ author {
 .box {
     padding: 10px;
     border: thin solid #aaa;
+    margin-bottom: 1em;
 }
 .single.container .box {
     padding-left: 30px;

@@ -87,12 +87,14 @@ Leiningen uses Clojure data structure to configure the project.
 
 We will add a really cool stack trace formatter.
 
+{{% box %}}
 ```
 (defproject hello-world "0.1.0-SNAPSHOT"
   :plugins [[io.aviso/pretty "0.1.34"]]
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [io.aviso/pretty "0.1.34"]])
 ```
+{{% /box %}}
 
 Let's run the erroneous `foo` function.
 
